@@ -1,0 +1,37 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 365 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 82">
+<rect width="365" height="179" rx="8" fill="var(--fill-0, #A4A3A3)"/>
+<g id="Frame 81">
+<rect x="10" y="13" width="40" height="40" rx="20" fill="var(--fill-0, white)"/>
+</g>
+<g id="Frame 84">
+<rect x="140" y="68" width="17" height="17" rx="8.5" fill="var(--fill-0, white)"/>
+</g>
+<path id="Star 1" d="M20.5 64L22.8574 71.2553H30.4861L24.3143 75.7394L26.6717 82.9947L20.5 78.5106L14.3283 82.9947L16.6857 75.7394L10.5139 71.2553H18.1426L20.5 64Z" fill="var(--fill-0, #D9D9D9)"/>
+<path id="Star 2" d="M45.5 65L47.8574 71.9098H55.4861L49.3143 76.1803L51.6717 83.0902L45.5 78.8197L39.3283 83.0902L41.6857 76.1803L35.5139 71.9098H43.1426L45.5 65Z" fill="var(--fill-0, #D9D9D9)"/>
+<path id="Star 3" d="M70.5 65L72.8574 71.9098H80.4861L74.3143 76.1803L76.6717 83.0902L70.5 78.8197L64.3283 83.0902L66.6857 76.1803L60.5139 71.9098H68.1426L70.5 65Z" fill="var(--fill-0, #D9D9D9)"/>
+<path id="Star 4" d="M95.5 65L97.8574 71.9098H105.486L99.3143 76.1803L101.672 83.0902L95.5 78.8197L89.3283 83.0902L91.6857 76.1803L85.5139 71.9098H93.1426L95.5 65Z" fill="var(--fill-0, #D9D9D9)"/>
+<path id="Star 5" d="M120.5 65L122.857 71.9098H130.486L124.314 76.1803L126.672 83.0902L120.5 78.8197L114.328 83.0902L116.686 76.1803L110.514 71.9098H118.143L120.5 65Z" fill="var(--fill-0, #D9D9D9)"/>
+<g id="Frame 82_2">
+<rect width="134" height="22" transform="translate(57 13)" fill="white"/>
+</g>
+<g id="Frame 83">
+<rect width="86" height="10" transform="translate(57 39)" fill="white"/>
+</g>
+<g id="Frame 85">
+<rect width="345" height="10" transform="translate(10 100)" fill="white"/>
+</g>
+<g id="Frame 86">
+<rect width="345" height="10" transform="translate(10 114)" fill="white"/>
+</g>
+<g id="Frame 87">
+<rect width="345" height="10" transform="translate(10 128)" fill="white"/>
+</g>
+<g id="Frame 88">
+<rect width="345" height="10" transform="translate(10 142)" fill="white"/>
+</g>
+<g id="Frame 89">
+<rect width="345" height="10" transform="translate(10 156)" fill="white"/>
+</g>
+</g>
+</svg>

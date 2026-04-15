@@ -1,0 +1,202 @@
+# Miracle Touch Salon — UX/UI Audit Report
+
+> [!NOTE]
+> This comprehensive 7-phase audit covers visual hierarchy, component consistency, core booking flows, accessibility, responsiveness, microcopy, and performance based on the current Next.js (Tailwind v4) implementation of the Miracle Touch Salon app.
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 1 — VISUAL INVENTORY
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**Overview**: The design language establishes a premium, luxury aesthetic using high contrast (`#000000` backgrounds with `#c9a84c` Gold accents) and a sharp typographic blend of Modern Sans (`Futura`/`Poppins`) and elegant Serif (`Playfair Display`/`Cormorant`/`IM Fell English`). 
+
+ISSUE: Inconsistent Font Pairings Across Headers
+PHASE: 1
+SEVERITY: Medium
+LOCATION: `src/components/sections/` (About, Experience vs. Services)
+PROBLEM: While most headings use `font-playfair`, `About.tsx` uses `font-playfair` for the main title but switches abruptly to `font-cormorant` for the "Opening hours" card. `Team.tsx` uses `font-poppins` for cards while `Testimonials.tsx` recently upgraded to `font-futura` and `font-im-fell`. This inconsistency dilutes the unified premium brand feel.
+FIX: Standardize header scales. Use `font-playfair` for all primary section headers and `font-futura` for all secondary UI text/cards. Reserve `font-im-fell` solely for quotes.
+EFFORT: S
+
+ISSUE: Floating Action Buttons Color Clash
+PHASE: 1
+SEVERITY: Low
+LOCATION: `src/components/layout/FloatingActions.tsx`
+PROBLEM: The vivid green (`#25D366`) WhatsApp icon clashes harshly against the vintage luxury gold (`#c9a84c`) and `mint` (`#9bffa3`) aesthetic of the site.
+FIX: Wrap the WhatsApp icon in a monochrome or dark glassmorphic pill (similar to the Phone number) and only show the native green on `hover`.
+EFFORT: XS
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 2 — COMPONENT AUDIT
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISSUE: Redundant Button/Link Implementations
+PHASE: 2
+SEVERITY: Medium
+LOCATION: `src/components/sections/Services.tsx` vs `Team.tsx` vs `Testimonials.tsx`
+PROBLEM: Action buttons are not abstracted into a reusable UI component. `Services.tsx` hardcodes the "Explore all Services" button classes, `Testimonials.tsx` hardcodes "Experience The Excellence", and `FloatingActions.tsx` hardcodes "Book Now". This leads to slight variations in padding, hover transitions, and tracking.
+FIX: Create a `<Button variant="primary" | "secondary" />` component in `src/components/ui/Button.tsx`. Consume this unified button globally.
+EFFORT: M
+
+ISSUE: Form Inputs Lack Accessible Wrappers
+PHASE: 2
+SEVERITY: High
+LOCATION: `src/components/sections/BookingSection.tsx`
+PROBLEM: The booking inputs are styled inline with `border-b` but lack explicit `:focus-visible` ring parameters or `aria-required` tags. Screen reader compatibility for dropdowns (e.g., Service selection) is minimal.
+FIX: Implement Radix UI primitives or standard accessible wrappers for standard inputs, ensuring focus states have a high-contrast offset ring (not just a border color change).
+EFFORT: M
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 3 — USER FLOW ANALYSIS
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**Focus Flow**: Booking an Appointment (`/book` & `BookingSection.tsx`)
+
+ISSUE: Booking Form is a "Dead End" State
+PHASE: 3
+SEVERITY: Critical
+LOCATION: `src/components/sections/BookingSection.tsx`
+PROBLEM: The form has an `onSubmit={(e) => { e.preventDefault(); }}` placeholder. When users spend time typing their details and hit "Book Appointment", absolutely nothing happens—no optimistic loading state, no success toast, no API connection. This causes high friction and user abandonment.
+FIX: Wire the form to a server action or API route (e.g., Resend to send an email, or Twilio for SMS). Add a `isSubmitting` state that turns the button into a loading spinner, followed by a `<SuccessModal />` upon completion.
+EFFORT: L
+
+ISSUE: No direct path from "Team/Stylist" to "Book Stylist"
+PHASE: 3
+SEVERITY: Low
+LOCATION: `src/app/blog/page.tsx` & `Team.tsx`
+PROBLEM: Users browsing the stylist profiles/socials or the Before/After gallery cannot seamlessly book *that specific service*.
+FIX: Pass URL query parameters when clicking "Book" under a specific service (e.g. `href="/contact?service=hair-fixing"`), and read those parameters in the `BookingSection` to auto-populate the `<select>` dropdown.
+EFFORT: S
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 4 — ACCESSIBILITY (WCAG 2.1 AA)
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISSUE: Low Contrast on Muted/Gray Text
+PHASE: 4
+SEVERITY: High
+LOCATION: `src/app/globals.css` and `BookingSection.tsx`
+PROBLEM: The `--color-salon-muted` (`#8e8e8e`) text used against the pitch-black `#000000` background barely passes WCAG AA for small text, and the placeholder text in the Booking `textarea` (`placeholder:text-gray-500`) fails contrast requirements entirely.
+FIX: Lighten the placeholder text to `#a4a3a3` and explicitly define typography opacities (e.g. `text-white/70`) that guarantee 4.5:1 contrast against black.
+EFFORT: XS
+
+ISSUE: Hover Triggers on Touch Devices
+PHASE: 4
+SEVERITY: Medium
+LOCATION: `src/components/sections/Team.tsx`
+PROBLEM: The Instagram image overlays (`group-hover:opacity-100`) contain the captions and likes. On mobile (touch devices), hover states do not trigger reliably, making this content inaccessible to touch users.
+FIX: Add a CSS media query `@media (hover: none)` forcing the opacity to be semi-visible natively on mobile, or reveal caption on immediate tap.
+EFFORT: S
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 5 — RESPONSIVE & MOBILE AUDIT
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISSUE: Floating Actions Blocking Footer Content
+PHASE: 5
+SEVERITY: Medium
+LOCATION: `src/components/layout/FloatingActions.tsx` / `Mobile 375px`
+PROBLEM: The global Floating Actions widget on the bottom right rests cleanly, but on highly compressed mobile layouts (e.g., iPhone SE/320px), the Book Now text and WhatsApp dual-pill take up ~50% of the screen width, potentially overlapping core `Footer.tsx` links when scrolled to the bottom.
+FIX: Consolidate the widget on mobile devices into a single circular FAB (Floating Action Button) that expands into a mini-menu upon touch, ensuring 100% thumb reachability while saving screen real estate.
+EFFORT: M
+
+ISSUE: Scroll Snap Misalignment in Testimonials
+PHASE: 5
+SEVERITY: Low
+LOCATION: `src/components/sections/Testimonials.tsx`
+PROBLEM: The horizontal row of testimonials uses `snap-mandatory snap-x` with fixed `w-[365px]` cards. On 320px screen widths, the 365px card overflows the maximum viewport width, breaking horizontal snapping alignment.
+FIX: Change card width to `w-[85vw] md:w-[365px]` to ensure it comfortably fits inside any mobile viewport while maintaining alignment.
+EFFORT: XS
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 6 — CONTENT & MICROCOPY REVIEW
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISSUE: Over-generic Action Labels
+PHASE: 6
+SEVERITY: Low
+LOCATION: `src/components/sections/Pricing.tsx` & `Services.tsx`
+PROBLEM: The label "Explore all Services" is used repeatedly. The CTA in the hero says "Book a consultation", while the booking section button says "Book Appointment". This mixes intents (Consultation vs Appointment).
+FIX: Unify the primary conversion action terminology. Since services are premium, use "Reserve a Consultation" globally for booking actions to maintain a high-end, consultative tone.
+EFFORT: XS
+
+ISSUE: Missing Empty States for API Calls
+PHASE: 6
+SEVERITY: Medium
+LOCATION: `src/components/sections/Testimonials.tsx`
+PROBLEM: Current logic `const reviews = data?.reviews ?? [];` handles empty reviews silently. If the Google Reviews API fails or is empty, the user sees an empty black box or a weird layout gap.
+FIX: Introduce a fallback static array of curated testimonials if `reviews.length === 0`, ensuring the section always looks populated.
+EFFORT: S
+
+---
+
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+## PHASE 7 — PERFORMANCE & INTERACTION QUALITY
+## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ISSUE: LCP (Largest Contentful Paint) Delayed by Hero Image
+PHASE: 7
+SEVERITY: High
+LOCATION: `src/components/sections/Hero.tsx`
+PROBLEM: While the `Hero.tsx` correctly uses the `priority` flag on `currentIndex === 0`, the heavy asset `hero-banner.png` (1.7MB) and `hero-banner-mobile-view.png` (500KB) causes a massive spike in LCP. 
+FIX: Convert all hero `.png` and `.jpg` banner assets to `.webp` format natively. Implement `blurDataURL` to show an immediate skeleton/blurred placeholder while the high-res desktop hero mounts.
+EFFORT: M
+
+ISSUE: CLS on Font Load 
+PHASE: 7
+SEVERITY: Medium
+LOCATION: `src/app/layout.tsx`
+PROBLEM: The app imports 6 explicit Google Fonts (`Playfair`, `Cormorant`, `Poppins`, `Syne`, `IM Fell`, `Wittgenstein`). High payload causes layout shifts when swapping from native fonts to web fonts.
+FIX: Prune unused fonts. Given the recent UI updates, `Syne` and `Cormorant` appear heavily redundant. Consolidate to `Playfair`, `Futura` (local), and `Poppins` to drastically reduce render-blocking times. 
+EFFORT: M
+
+---
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# FINAL DELIVERABLES
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 1. AUDIT SCORECARD
+
+| Phase | Category | Score | Verdict |
+|-------|----------|-------|---------|
+| **1** | **Visual Hierarchy** | 8/10 | Excellent luxury aesthetic, minor font pairing inconsistencies. |
+| **2** | **Components** | 6/10 | Needs extraction of primitive components (Buttons, Inputs). |
+| **3** | **User Flows** | 4/10 | Booking form is a dead-end UI without submission logic. |
+| **4** | **Accessibility** | 6/10 | Touch targets are good, but contrast/hover traps need polish. |
+| **5** | **Responsive Layout** | 8/10 | Most sections adapt brilliantly; edge mobile overlap issues exist. |
+| **6** | **Microcopy** | 7/10 | Professional tone, lacks cohesive unified terminology. |
+| **7** | **Performance** | 5/10 | Font bloat and heavy unoptimized PNG assets hurt LCP. |
+
+## 2. TOP 5 PRIORITY FIXES (Impact-to-Effort Ratio)
+1. **Critical:** Wire up the `BookingSection` form to an actual API and add a Success state (`Phase 3 | Effort: L`).
+2. **High:** Convert Hero images from heavy `.png`/`.jpg` to highly compressed `.webp` (`Phase 7 | Effort: M`).
+3. **High:** Fix the contrast on textarea placeholders and muted typography across global CSS (`Phase 4 | Effort: XS`).
+4. **Medium:** Overhaul the Booking forms to utilize strict `:focus-visible` accessible wrappers (`Phase 2 | Effort: M`).
+5. **Medium:** Pass URL parameters (e.g., `?service=spa`) from the Services page directly into the Booking dropdown (`Phase 3 | Effort: S`).
+
+## 3. QUICK WINS LIST (Ship Today)
+* Change `w-[365px]` in Testimonials to `w-[85vw] md:w-[365px]` to prevent edge mobile viewport bleed.
+* Simplify the CTA terminology universally to "Reserve a Consultation".
+* Lighten the Booking input placeholders to `#a4a3a3`.
+* Swap the stark green WhatsApp floating button to a dark-mode `#111` backdrop with green active/hover transitions.
+
+## 4. DESIGN SYSTEM RECOMMENDATIONS
+* **Typography Token Consolidation:** Standardize on exactly three font stacks:
+  * *Primary Header:* `Playfair Display`
+  * *Body & Microcopy:* `Futura PT` (or `Poppins` as fallback)
+  * *Accents/Quotes:* `IM Fell English` 
+  *(Remove Syne, Cormorant, and Wittgenstein from `layout.tsx` to save ~150KB).*
+* **Buttons Container Extraction:** Extract the repeated "Explore all Services" logic with the `arrow-circle.svg` into `<ButtonLink href="xyz">...</ButtonLink>`.
+* **Form Primitives:** Build a `<FloatingLabelInput />` component to replace the standard `border-b` inputs, giving a much richer, error-aware interaction design for user forms.
