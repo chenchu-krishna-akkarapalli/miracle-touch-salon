@@ -21,12 +21,12 @@ export function Navbar() {
         {/* Left: Logo (mobile) / Nav links (desktop) */}
         <Link
           href="/"
-          className="lg:hidden flex h-[45px] w-[82px] items-center justify-center border border-gold bg-white"
-          aria-label="Miracle Saloon home"
+          className="lg:hidden flex h-[60px] w-[107px] items-center justify-center bg-transparent"
+          aria-label="SHOW OFF home"
         >
           <Image
-            src="/images/logo.svg"
-            alt="Miracle Touch Logo"
+            src="/images/logo.png"
+            alt="SHOW OFF Logo"
             width={55}
             height={38}
             className="object-contain"
@@ -49,14 +49,14 @@ export function Navbar() {
         {/* Logo - desktop only (centered) */}
         <Link
           href="/"
-          className="hidden lg:flex h-[59px] w-[107px] items-center justify-center border border-gold bg-white"
-          aria-label="Miracle Saloon home"
+          className="hidden lg:flex h-[59px] w-[107px] items-center justify-center bg-transparent"
+          aria-label="SHOW OFF home"
         >
           <Image
-            src="/images/logo.svg"
-            alt="Miracle Touch Logo"
-            width={69}
-            height={48}
+            src="/images/logo.png"
+            alt="SHOW OFF Logo"
+            width={150}
+            height={150}
             className="object-contain"
           />
         </Link>

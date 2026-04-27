@@ -1,4 +1,4 @@
-# Miracle Touch Salon
+# SHOW OFF Salon
 
 A luxury salon website built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**.
 
@@ -30,8 +30,8 @@ A luxury salon website built with **Next.js 15**, **TypeScript**, and **Tailwind
 
 ```bash
 # Clone the repository
-git clone https://github.com/chenchu-krishna-akkarapalli/miracle-touch-salon.git
-cd miracle-touch-salon
+git clone https://github.com/chenchu-krishna-akkarapalli/SHOW OFF-touch-salon.git
+cd SHOW OFF-touch-salon
 
 # Install dependencies
 npm install
@@ -84,8 +84,8 @@ Or connect your GitHub repository directly to Vercel for automatic deployments.
 
 ## License
 
-© 2026 Miracle Touch Salon. All rights reserved.
-# Miracle Touch Salon
+© 2026 SHOW OFF Salon. All rights reserved.
+# SHOW OFF Salon
 
 Premium barbershop & salon booking platform built with Next.js, TypeScript, and Tailwind CSS.
 

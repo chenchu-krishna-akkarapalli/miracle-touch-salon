@@ -36,13 +36,13 @@ export function AboutSection() {
         >
           <div className="flex h-full flex-col items-center justify-center gap-4 md:gap-6 px-4 py-8 sm:px-6 sm:py-10 text-center md:px-12 lg:px-16">
             <h3 className="font-playfair text-[20px] md:text-[24px] lg:text-[32px] font-medium tracking-[1.5px] lg:tracking-[1.92px] text-gold">
-              MIRACLE HAIRDRESSER IN BANGALORE
+              SHOW OFF HAIRDRESSER IN BANGALORE
             </h3>
             <div className="max-w-[750px] space-y-2 md:space-y-4 text-[13px] leading-snug md:text-[16px] lg:text-[18px] md:leading-relaxed text-black font-futura">
               <p>
-                At Miracle Touch Salon &amp; Hair Fixing Studio in Mahadevapura, Bengaluru,
+                At SHOW OFF Salon &amp; Hair Fixing Studio in Mahadevapura, Bengaluru,
                 beauty is more than a service — it&apos;s a carefully crafted journey. Led by
-                renowned stylist Mr. Raju, who has styled celebrities, political figures, and
+                renowned stylist Mr. Saha, who has styled celebrities, political figures, and
                 elite clientele, our unisex salon delivers premium grooming and transformation
                 with unmatched expertise.
               </p>
@@ -53,12 +53,12 @@ export function AboutSection() {
               </p>
               <p>
                 Behind every experience at our Pai Layout salon is a dedicated team of
-                professionally trained stylists and therapists, handpicked by Mr. Raju himself.
+                professionally trained stylists and therapists, handpicked by Mr. Saha himself.
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 mt-2 md:mt-0">
               <Image
-                src="/images/icons/decorative-flourish.svg"
+                src="/images/logo.png"
                 alt=""
                 width={60}
                 height={30}

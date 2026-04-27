@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { SERVICES, SERVICE_CATEGORIES } from '@/config/constants';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Hair Fixing â€“ Miracle Touch Salon',
+  title: 'Hair Fixing â€“ SHOW OFF Salon',
   description: 'Experience our professional hair fixing and replacement services. Reclaim your confidence with a natural look.',
   path: '/hair-fixing',
 });

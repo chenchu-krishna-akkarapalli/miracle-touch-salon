@@ -60,7 +60,7 @@ export function TestimonialsSection() {
     fetch('/api/google-reviews')
       .then((r) => r.json())
       .then(setData)
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   // Sort reviews: 5-stars with text first
@@ -70,7 +70,7 @@ export function TestimonialsSection() {
       profile_photo_url: "/images/gallery/1.png",
       rating: 5,
       relative_time_description: "2 weeks ago",
-      text: "Absolutely stunning service. Raju and his team are true professionals!"
+      text: "Absolutely stunning service. Saha and his team are true professionals!"
     },
     {
       author_name: "Priya Sharma",
@@ -114,7 +114,7 @@ export function TestimonialsSection() {
             A Legacy of Excellence in Every Review
           </span>
         </div>
-        
+
         {/* Overall rating */}
         {data && (
           <div className="flex items-center gap-2 md:gap-4 mt-2 px-4 py-1.5 md:px-6 md:py-2 border border-gold/30 rounded-full bg-gold/5">
@@ -202,9 +202,9 @@ export function TestimonialsSection() {
 
             {/* Review text */}
             <div className="mt-2 md:mt-4 flex-1">
-               <p className="font-im-fell italic text-[14px] sm:text-[16px] md:text-[18px] leading-snug md:leading-relaxed text-gray-300 relative z-10 line-clamp-4 md:line-clamp-4">
-                 "{review.text}"
-               </p>
+              <p className="font-im-fell italic text-[14px] sm:text-[16px] md:text-[18px] leading-snug md:leading-relaxed text-gray-300 relative z-10 line-clamp-4 md:line-clamp-4">
+                "{review.text}"
+              </p>
             </div>
           </motion.div>
         ))}

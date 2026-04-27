@@ -1,7 +1,7 @@
 import { createMetadata } from '@/config/seo';
 
 export const metadata = createMetadata({
-  title: 'Dashboard – Miracle Touch Salon',
+  title: 'Dashboard – SHOW OFF Salon',
   description: 'View your upcoming appointments and booking history.',
   path: '/dashboard',
 });

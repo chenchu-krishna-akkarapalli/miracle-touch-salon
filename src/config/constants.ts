@@ -93,7 +93,7 @@ export const SERVICES: Service[] = [
     image: '/images/gallery/4.png',
     featured: false,
   },
-  
+
   // --- COLORING ---
   {
     id: '2',
@@ -408,7 +408,7 @@ export const SERVICES: Service[] = [
     slug: 'hair-fixing-consultation',
     name: 'Hair Fixing Consultation',
     category: 'grooming',
-    description: 'A highly confidential, one-on-one session with Mr. Raju Miracle focusing on bespoke hair fixing, patches, and non-surgical restoration mapping.',
+    description: 'A highly confidential, one-on-one session with Mr. Saha SHOW OFF focusing on bespoke hair fixing, patches, and non-surgical restoration mapping.',
     shortDescription: 'Confidential mapping for non-surgical hair restoration.',
     price: 1000,
     duration: 45,
@@ -462,9 +462,9 @@ export const STATS = [
 export const STYLISTS: Stylist[] = [
   {
     id: '1',
-    name: 'Mr. Raju Miracle',
+    name: 'Mr. Saha SHOW OFF',
     role: 'Master Stylist & Founder',
-    bio: 'At the age of 52, Raju Miracle stands as a living embodiment of passion, precision, and artistic excellence in hairstyling.',
+    bio: 'At the age of 52, Saha SHOW OFF stands as a living embodiment of passion, precision, and artistic excellence in hairstyling.',
     image: '/images/gallery/1.png',
     specialties: ['Hair Fixing', 'Celebrity Styling', 'Hair Coloring'],
     experience: 40,
@@ -502,7 +502,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Regular Client',
     avatar: '/images/gallery/4.png',
     rating: 5,
-    text: 'The best salon experience in Bangalore. Mr. Raju truly understands hair like no one else. My hair transformation was incredible!',
+    text: 'The best salon experience in Bangalore. Mr. Saha truly understands hair like no one else. My hair transformation was incredible!',
   },
   {
     id: '2',
@@ -510,7 +510,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Business Executive',
     avatar: '/images/gallery/5.png',
     rating: 5,
-    text: 'Professional, premium, and precise. Every visit to Miracle Touch feels like a luxury experience. Highly recommend their grooming services.',
+    text: 'Professional, premium, and precise. Every visit to SHOW OFF feels like a luxury experience. Highly recommend their grooming services.',
   },
   {
     id: '3',
@@ -592,7 +592,7 @@ export const PRODUCTS = [
   // --- Hair Reborn & Deep Masks ---
   {
     id: '6',
-    name: 'Miracle Touch – Keratine Reborn Mask',
+    name: 'SHOW OFF – Keratine Reborn Mask',
     category: 'Hair Reborn & Deep Masks',
     price: '₹ 3,200',
     image: '/images/products/product-6.png',
@@ -708,7 +708,7 @@ export const EXPERIENCE_SECTIONS = [
     subtitle: '– The Art Behind Every Transformation',
     quote: 'A Legacy of Style, Precision, and Timeless Elegance',
     description:
-      'At the age of 52, Raju Miracle stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Raju displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Raju apart is not just his skill, but his deep understanding of people—their personalities,',
+      'At the age of 52, Saha SHOW OFF stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Saha displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Saha apart is not just his skill, but his deep understanding of people—their personalities,',
     image: '/images/products/experience-1.png',
     imagePosition: 'left' as const,
   },
@@ -718,7 +718,7 @@ export const EXPERIENCE_SECTIONS = [
     subtitle: '– The Art Behind Every Transformation',
     quote: 'A Legacy of Style, Precision, and Timeless Elegance',
     description:
-      'At the age of 52, Raju Miracle stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Raju displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Raju apart is not just his skill, but his deep understanding of people—their personalities,',
+      'At the age of 52, Saha SHOW OFF stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Saha displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Saha apart is not just his skill, but his deep understanding of people—their personalities,',
     image: '/images/products/experience-2.png',
     imagePosition: 'right' as const,
   },

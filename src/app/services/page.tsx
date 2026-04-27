@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = createMetadata({
-  title: 'Our Services â€“ Miracle Touch Salon',
+  title: 'Our Services â€“ SHOW OFF Salon',
   description:
     'Explore our complete range of premium hair services including cuts, coloring, spa treatments, and bridal styling.',
   path: '/services',

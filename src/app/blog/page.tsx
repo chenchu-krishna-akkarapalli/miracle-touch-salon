@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { Star, Scissors, HandMetal, Award, Sparkles, Crown, Gem } from 'lucide-react';
 
 export const metadata = createMetadata({
-  title: 'Our Journey & Achievements â€“ Miracle Touch Salon',
-  description: 'Discover the story behind Miracle Touch Salon, our awards, top celebrity clients, and client reviews.',
+  title: 'Our Journey & Achievements â€“ SHOW OFF Salon',
+  description: 'Discover the story behind SHOW OFF Salon, our awards, top celebrity clients, and client reviews.',
   path: '/blog',
 });
 
@@ -16,21 +16,21 @@ const TIMELINE = [
   {
     year: '1995',
     title: 'The Genesis',
-    body: 'Miracle Touch was born from a single chair and an unwavering vision. Mr. Raju Miracle opened the doors to what would become Bangalore\'s most distinguished salon, driven by a passion for transforming lives through artistry.',
+    body: 'SHOW OFF was born from a single chair and an unwavering vision. Mr. Saha SHOW OFF opened the doors to what would become Bangalore\'s most distinguished salon, driven by a passion for transforming lives through artistry.',
     icon: Scissors,
     side: 'left' as const,
   },
   {
     year: '2005',
     title: 'Celebrity Recognition',
-    body: 'A decade of relentless dedication bore fruit as Bollywood A-listers and prominent political figures sought Mr. Raju\'s expertise. The salon became the trusted name for those who demand absolute perfection.',
+    body: 'A decade of relentless dedication bore fruit as Bollywood A-listers and prominent political figures sought Mr. Saha\'s expertise. The salon became the trusted name for those who demand absolute perfection.',
     icon: Crown,
     side: 'right' as const,
   },
   {
     year: '2012',
     title: 'Mastering Hair Fixing',
-    body: 'Pioneering non-surgical hair replacement techniques in Bangalore. Mr. Raju travelled internationally to master cutting-edge restoration methods, establishing a specialized wing that would redefine confidence for thousands.',
+    body: 'Pioneering non-surgical hair replacement techniques in Bangalore. Mr. Saha travelled internationally to master cutting-edge restoration methods, establishing a specialized wing that would redefine confidence for thousands.',
     icon: Gem,
     side: 'left' as const,
   },
@@ -51,7 +51,7 @@ const TIMELINE = [
   {
     year: '2024',
     title: 'A Legacy Continues',
-    body: 'With 40+ years of mastery, 15,000+ happy faces, and an unbroken legacy of excellence, Miracle Touch stands as the benchmark for luxury grooming in India â€” and the journey is far from over.',
+    body: 'With 40+ years of mastery, 15,000+ happy faces, and an unbroken legacy of excellence, SHOW OFF stands as the benchmark for luxury grooming in India â€” and the journey is far from over.',
     icon: HandMetal,
     side: 'right' as const,
   },

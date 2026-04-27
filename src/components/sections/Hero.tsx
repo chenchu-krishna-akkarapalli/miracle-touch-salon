@@ -87,7 +87,7 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="font-futura text-xl text-mint text-center md:text-[32px]"
         >
-          Est. 1995 · MIRACLE TOUCH
+          Est. 1995 · SHOW OFF
         </motion.p>
       </div>
 
@@ -114,7 +114,7 @@ export function Hero() {
             {/* Desktop Image */}
             <Image
               src={HERO_IMAGES[currentIndex].desktop}
-              alt={`Miracle Touch Salon Banner ${currentIndex + 1}`}
+              alt={`SHOW OFF Salon Banner ${currentIndex + 1}`}
               fill
               priority={currentIndex === 0}
               className="object-cover hidden md:block"
@@ -125,7 +125,7 @@ export function Hero() {
             {/* Mobile Image */}
             <Image
               src={HERO_IMAGES[currentIndex].mobile}
-              alt={`Miracle Touch Salon Banner Mobile ${currentIndex + 1}`}
+              alt={`SHOW OFF Salon Banner Mobile ${currentIndex + 1}`}
               fill
               priority={currentIndex === 0}
               className="object-cover block md:hidden"
@@ -142,10 +142,10 @@ export function Hero() {
         <div className="hidden md:block absolute left-[20px] top-[20px] w-[371px] h-[364px] rounded-[9px] border border-gold bg-black/30 overflow-hidden z-10">
           <div className="absolute left-[25px] top-1/2 -translate-y-1/2 flex flex-col gap-[10px] items-start w-[317px]">
             <p className="font-futura text-[20px] text-white leading-normal">
-              Est. 1995 · MIRACLE TOUCH
+              Est. 1995 · SHOW OFF
             </p>
             <h2 className="font-playfair text-[38px] font-semibold text-white leading-normal">
-              MIRACLE TOUCH
+              SHOW OFF
             </h2>
             <div className="flex flex-col pb-[2px] w-[251px]">
               <p className="font-playfair text-[36px] font-bold text-white leading-normal">
@@ -156,7 +156,7 @@ export function Hero() {
               </p>
             </div>
             <p className="font-futura text-[13px] leading-normal text-white">
-              Since 1988, <span className="font-bold text-mint">MIRACLE TOUCH</span>{' '}
+              Since 1988, <span className="font-bold text-mint">SHOW OFF</span>{' '}
               has been Bengaluru&apos;s most cherished destination for hair artistry. We
               blend century-old craft with modern science to create looks that are as
               enduring as they are breathtaking.

@@ -17,7 +17,7 @@ const blocks: ExperienceBlock[] = [
     title: 'HAIR FIXING',
     subtitle: '– The Art Behind Every Transformation',
     quote: 'A Legacy of Style, Precision, and Timeless Elegance',
-    text: "At the age of 52, Raju Miracle stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Raju displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Raju apart is not just his skill, but his deep understanding of people—their personalities,",
+    text: "At the age of 52, Saha SHOW OFF stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Saha displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Saha apart is not just his skill, but his deep understanding of people—their personalities,",
     image: '/images/experience/hair-fixing-1.png',
     reversed: false,
   },
@@ -25,7 +25,7 @@ const blocks: ExperienceBlock[] = [
     title: 'HAIR FIXING',
     subtitle: '– The Art Behind Every Transformation',
     quote: 'A Legacy of Style, Precision, and Timeless Elegance',
-    text: "At the age of 52, Raju Miracle stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Raju displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Raju apart is not just his skill, but his deep understanding of people—their personalities,",
+    text: "At the age of 52, Saha SHOW OFF stands as a living embodiment of passion, precision, and artistic excellence in hairstyling. His journey began in the vibrant corridors of celebrity and political circles, where his talent quickly gained recognition among the elite. From a young age, Saha displayed an extraordinary ability to sculpt not just hair, but confidence—turning every style into a statement. Over the decades, his hands have crafted the looks of influential personalities, blending technique with intuition to create styles that reflect individuality. What sets Saha apart is not just his skill, but his deep understanding of people—their personalities,",
     image: '/images/experience/hair-fixing-2.png',
     reversed: true,
   },
@@ -48,9 +48,8 @@ export function ExperienceSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, type: 'spring' }}
-            className={`flex flex-col gap-8 lg:items-center ${
-              block.reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
-            }`}
+            className={`flex flex-col gap-8 lg:items-center ${block.reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
+              }`}
           >
             {/* Image */}
             <div className="relative h-[350px] w-full overflow-hidden rounded-[8px] lg:h-[542px] lg:w-[687px] lg:shrink-0">

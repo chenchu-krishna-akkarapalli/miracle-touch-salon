@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'Miracle Saloon',
+  name: 'SHOW OFF',
   description:
-    'Premium barbershop and salon in Bangalore. Hair fixing, styling, coloring, and spa treatments by celebrity stylist Mr. Raju since 1995.',
-  url: 'https://miraclesaloon.com',
+    'Premium barbershop and salon in Bangalore. Hair fixing, styling, coloring, and spa treatments by celebrity stylist Mr. Saha since 1995.',
+  url: 'https://SHOW OFFsaloon.com',
   ogImage: '/og-image.jpg',
   keywords: [
     'salon bangalore',
     'hair fixing bangalore',
     'barbershop bangalore',
-    'miracle touch salon',
+    'SHOW OFF salon',
     'hair coloring',
     'bridal styling',
     'keratin treatment',
@@ -33,7 +33,7 @@ export function createMetadata(opts: CreateMetadataOptions = {}): Metadata {
     title,
     description,
     keywords: siteConfig.keywords,
-    authors: [{ name: 'Miracle Touch Salon' }],
+    authors: [{ name: 'SHOW OFF Salon' }],
     openGraph: {
       type: 'website',
       locale: 'en_IN',

@@ -16,9 +16,9 @@ const TestimonialsSection = dynamic(() => import('@/components/sections/Testimon
 const TeamSection = dynamic(() => import('@/components/sections/Team'));
 
 export const metadata = createMetadata({
-  title: 'Miracle Touch Salon - Premium Barbershop & Salon in Bangalore',
+  title: 'SHOW OFF Salon - Premium Barbershop & Salon in Bangalore',
   description:
-    "Since 1995, Miracle Touch has been Bengaluru's most cherished destination for hair artistry. Book your transformation today.",
+    "Since 1995, SHOW OFF has been Bengaluru's most cherished destination for hair artistry. Book your transformation today.",
   path: '/',
 });
 

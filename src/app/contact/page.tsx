@@ -4,8 +4,8 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import BookingSection from '@/components/sections/BookingSection';
 
 export const metadata = createMetadata({
-  title: 'Contact Us – Miracle Touch Salon',
-  description: 'Get in touch with Miracle Touch Salon. Find our location, hours of operation, and contact details.',
+  title: 'Contact Us – SHOW OFF Salon',
+  description: 'Get in touch with SHOW OFF Salon. Find our location, hours of operation, and contact details.',
   path: '/contact',
 });
 

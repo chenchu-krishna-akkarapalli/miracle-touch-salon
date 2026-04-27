@@ -22,7 +22,7 @@ export function BookingSection() {
     if (typeof window !== 'undefined') {
       const urlParams = new URL(window.location.href).searchParams;
       const serviceParam = urlParams.get('service');
-      if (serviceParam && ['haircut','coloring','spa','scalp','bridal','fixing'].includes(serviceParam)) {
+      if (serviceParam && ['haircut', 'coloring', 'spa', 'scalp', 'bridal', 'fixing'].includes(serviceParam)) {
         setFormData(prev => ({ ...prev, service: serviceParam }));
       }
     }
@@ -70,7 +70,7 @@ export function BookingSection() {
               <MapPin className="text-[#c9a84c] w-6 h-6 flex-shrink-0 transition-transform group-hover:scale-110 group-hover:-translate-y-1" />
               <div>
                 <span className="block font-futura font-[600] text-[12px] text-white uppercase tracking-widest mb-1">Location</span>
-                <span className="block font-futura font-[300] text-[14px] text-gray-300">123 Salon Street,<br/>Mahadevapura, Bangalore</span>
+                <span className="block font-futura font-[300] text-[14px] text-gray-300">123 Salon Street,<br />Mahadevapura, Bangalore</span>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ export function BookingSection() {
               <Clock className="text-[#c9a84c] w-6 h-6 flex-shrink-0 transition-transform group-hover:scale-110 group-hover:-translate-y-1" />
               <div>
                 <span className="block font-futura font-[600] text-[12px] text-white uppercase tracking-widest mb-1">Opening Hours</span>
-                <span className="block font-futura font-[300] text-[14px] text-gray-300">Mon - Sun<br/>09:00 AM - 08:00 PM</span>
+                <span className="block font-futura font-[300] text-[14px] text-gray-300">Mon - Sun<br />09:00 AM - 08:00 PM</span>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ export function BookingSection() {
               <Mail className="text-[#c9a84c] w-6 h-6 flex-shrink-0 transition-transform group-hover:scale-110 group-hover:-translate-y-1" />
               <div>
                 <span className="block font-futura font-[600] text-[12px] text-white uppercase tracking-widest mb-1">Email</span>
-                <span className="block font-futura font-[300] text-[14px] text-gray-300">hello@miracletouch.com</span>
+                <span className="block font-futura font-[300] text-[14px] text-gray-300">hello@SHOW OFFtouch.com</span>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export function BookingSection() {
         {/* Right form */}
         <div className="w-full overflow-hidden rounded-[9px] border border-[#c9a84c]/20 bg-[#111] lg:w-[765px] lg:min-h-[531px]">
           {isSuccess ? (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="flex h-full min-h-[531px] flex-col items-center justify-center p-8 lg:p-10 text-center gap-4"
@@ -132,106 +132,106 @@ export function BookingSection() {
               className="flex flex-col gap-6 p-8 lg:p-10"
               onSubmit={handleSubmit}
             >
-            {/* Row 1: Name + Gender */}
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="flex flex-col gap-2">
-                <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Enter your name"
-                  required
-                  className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 placeholder:text-[#a4a3a3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all"
-                />
+              {/* Row 1: Name + Gender */}
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="flex flex-col gap-2">
+                  <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Enter your name"
+                    required
+                    className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 placeholder:text-[#a4a3a3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Gender</label>
+                  <select
+                    name="gender"
+                    value={formData.gender}
+                    onChange={handleChange}
+                    required
+                    className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [&>option]:bg-black"
+                  >
+                    <option value="" disabled>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Gender</label>
-                <select
-                  name="gender"
-                  value={formData.gender}
-                  onChange={handleChange}
-                  required
-                  className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [&>option]:bg-black"
-                >
-                  <option value="" disabled>Select Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
 
-            {/* Row 2: Services + Date */}
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="flex flex-col gap-2">
-                <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Services</label>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [&>option]:bg-black"
-                >
-                  <option value="" disabled>Select Service</option>
-                  <option value="haircut">Haircuts &amp; Blowouts</option>
-                  <option value="coloring">Hair Coloring</option>
-                  <option value="spa">Hair Spa</option>
-                  <option value="scalp">Scalp Therapy</option>
-                  <option value="bridal">Bridal Styling</option>
-                  <option value="fixing">Hair Fixing</option>
-                </select>
+              {/* Row 2: Services + Date */}
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="flex flex-col gap-2">
+                  <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Services</label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [&>option]:bg-black"
+                  >
+                    <option value="" disabled>Select Service</option>
+                    <option value="haircut">Haircuts &amp; Blowouts</option>
+                    <option value="coloring">Hair Coloring</option>
+                    <option value="spa">Hair Spa</option>
+                    <option value="scalp">Scalp Therapy</option>
+                    <option value="bridal">Bridal Styling</option>
+                    <option value="fixing">Hair Fixing</option>
+                  </select>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Date</label>
+                  <input
+                    type="date"
+                    name="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                    required
+                    className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [color-scheme:dark]"
+                  />
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Date</label>
-                <input
-                  type="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  required
-                  className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [color-scheme:dark]"
-                />
+
+              {/* Row 3: Time */}
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="flex flex-col gap-2">
+                  <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Time</label>
+                  <input
+                    type="time"
+                    name="time"
+                    value={formData.time}
+                    onChange={handleChange}
+                    required
+                    className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [color-scheme:dark]"
+                  />
+                </div>
               </div>
-            </div>
 
-            {/* Row 3: Time */}
-            <div className="grid gap-6 md:grid-cols-2">
+              {/* Row 4: Notes (textarea) */}
               <div className="flex flex-col gap-2">
-                <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Time</label>
-                <input
-                  type="time"
-                  name="time"
-                  value={formData.time}
+                <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Message</label>
+                <textarea
+                  name="notes"
+                  value={formData.notes}
                   onChange={handleChange}
-                  required
-                  className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all [color-scheme:dark]"
-                />
+                  className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 h-[100px] resize-none placeholder:text-[#a4a3a3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all"
+                  placeholder="How can we help you?"
+                ></textarea>
               </div>
-            </div>
 
-            {/* Row 4: Notes (textarea) */}
-            <div className="flex flex-col gap-2">
-              <label className="font-futura text-[#c9a84c] text-[14px] uppercase tracking-widest">Message</label>
-              <textarea
-                name="notes"
-                value={formData.notes}
-                onChange={handleChange}
-                className="bg-transparent border-b border-[#c9a84c]/30 text-white font-futura text-[16px] py-[8px] px-1 h-[100px] resize-none placeholder:text-[#a4a3a3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c9a84c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111] rounded-[2px] transition-all"
-                placeholder="How can we help you?"
-              ></textarea>
-            </div>
-
-            {/* Submit button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`mt-[10px] inline-flex h-14 w-full items-center justify-center gap-3 rounded-[9px] border border-[#c9a84c] bg-[#c9a84c] px-8 text-black transition-all duration-300 hover:bg-[#d4b45d] font-futura font-[600] text-[16px] uppercase tracking-widest ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-            >
-              <span>{isSubmitting ? 'Processing...' : 'Reserve a Consultation'}</span>
-            </button>
-          </form>
+              {/* Submit button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`mt-[10px] inline-flex h-14 w-full items-center justify-center gap-3 rounded-[9px] border border-[#c9a84c] bg-[#c9a84c] px-8 text-black transition-all duration-300 hover:bg-[#d4b45d] font-futura font-[600] text-[16px] uppercase tracking-widest ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+              >
+                <span>{isSubmitting ? 'Processing...' : 'Reserve a Consultation'}</span>
+              </button>
+            </form>
           )}
         </div>
       </motion.div>

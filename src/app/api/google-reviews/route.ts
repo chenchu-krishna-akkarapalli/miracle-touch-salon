@@ -28,14 +28,14 @@ const FALLBACK_REVIEWS = [
     profile_photo_url: '',
     rating: 5,
     relative_time_description: '2 months ago',
-    text: 'The best salon experience in Bangalore. Mr. Raju truly understands hair like no one else. My hair transformation was incredible!',
+    text: 'The best salon experience in Bangalore. Mr. Saha truly understands hair like no one else. My hair transformation was incredible!',
   },
   {
     author_name: 'Vikram Singh',
     profile_photo_url: '',
     rating: 5,
     relative_time_description: '1 month ago',
-    text: 'Professional, premium, and precise. Every visit to Miracle Touch feels like a luxury experience. Highly recommend their grooming services.',
+    text: 'Professional, premium, and precise. Every visit to SHOW OFF feels like a luxury experience. Highly recommend their grooming services.',
   },
   {
     author_name: 'Divya Reddy',

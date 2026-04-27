@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="font-playfair text-2xl font-bold text-gold">
-              MIRACLE TOUCH
+              SHOW OFF
             </Link>
             <p className="font-cormorant text-lg text-mint leading-relaxed">
               Since 1995, Bengaluru&apos;s most cherished destination for hair artistry.
@@ -43,7 +43,7 @@ export function Footer() {
             </h3>
             <address className="flex flex-col gap-3 not-italic">
               <p className="font-poppins text-sm text-white/70">
-                Miracle Touch Salon
+                SHOW OFF Salon
               </p>
               <p className="font-poppins text-sm text-white/70">
                 Mahadevapura, Pai Layout
@@ -79,10 +79,10 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 flex flex-col items-center gap-4 border-t border-gold/10 pt-8 md:flex-row md:justify-between">
           <p className="font-poppins text-sm text-white/50">
-            &copy; {new Date().getFullYear()} Miracle Touch Salon. All rights reserved.
+            &copy; {new Date().getFullYear()} SHOW OFF Salon. All rights reserved.
           </p>
           <p className="font-poppins text-sm text-mint/60">
-            Est. 1995 · MIRACLE TOUCH
+            Est. 1995 · SHOW OFF
           </p>
         </div>
       </div>

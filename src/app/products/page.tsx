@@ -24,7 +24,7 @@ export default function ProductsPage() {
         <div className="relative w-full aspect-[1345/666] rounded-[9px] overflow-hidden">
           <Image
             src="/images/products/products-banner-img.png"
-            alt="Miracle Touch Est. 1995"
+            alt="SHOW OFF Est. 1995"
             fill
             className="object-cover"
             priority

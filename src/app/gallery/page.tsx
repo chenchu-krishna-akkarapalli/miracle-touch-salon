@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { GALLERY_IMAGES } from '@/config/constants';
 
 export const metadata = createMetadata({
-  title: 'Gallery – Miracle Touch Salon',
+  title: 'Gallery – SHOW OFF Salon',
   description: 'Browse our portfolio of premium hair transformations and salon artistry.',
   path: '/gallery',
 });

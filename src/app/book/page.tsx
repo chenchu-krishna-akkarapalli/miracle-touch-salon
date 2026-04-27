@@ -2,7 +2,7 @@ import { createMetadata } from '@/config/seo';
 import BookingForm from '@/components/booking/BookingForm';
 
 export const metadata = createMetadata({
-  title: 'Book Appointment – Miracle Touch Salon',
+  title: 'Book Appointment – SHOW OFF Salon',
   description:
     'Reserve your chair with a master craftsman. Each booking begins with a personalised consultation.',
   path: '/book',
